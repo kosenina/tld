@@ -12,5 +12,5 @@ def profile(request):
     return HttpResponse("You're at the profile page.")
 
 def article(request):
-    return HttpResponse("You're at the article page.")
+    return render(request, 'main/article.html')
 
