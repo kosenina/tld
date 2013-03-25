@@ -1,4 +1,4 @@
-__author__ = 'Tim'
+__author__ = 'Luka'
 from django.contrib import admin
 from main.models import Album,Picture,Sport,GPS,User,Article,Post
 
