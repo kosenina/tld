@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile page</title>
+</head>
+<body>
+    {% if user == None %}
+        <p>User not found</p>
+    {% else %}
+        <p><strong>Profile data</strong></p>
+        <p>Name: {{ user.name }}</p>
+        <p>Surname: {{ user.surname }}</p>
+        <p>e-Mail: {{ user.email }}</p>
+        <p>Country: {{ user.country }}</p>
+        <hr>
+        <p>Articles</p>
+        {% if articles_list %}
+            <ul>
+                {% for article in articles_list %}
+                    <li><a href="./article/ {{ article.id }}/">{{ article.date }}  -  {{ article.sport_id.sport_name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No articles are available.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
