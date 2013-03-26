@@ -30,6 +30,7 @@ class Article(models.Model):
     sport_id = models.ForeignKey(Sport)
     gps_file = models.ForeignKey(GPS)
     art_pic = models.ForeignKey(Picture)
+    user_id = models.ForeignKey(User)
 
 class Post(models.Model):
     art_id = models.ForeignKey(Article)
