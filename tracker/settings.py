@@ -113,6 +113,9 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+# provide our get_profile()
+AUTH_PROFILE_MODULE = 'users.Users'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,6 +128,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'main',
+    'users',
 )
 
 # A sample logging configuration. The only tangible logging
